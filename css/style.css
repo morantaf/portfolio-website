@@ -10,7 +10,7 @@ html {
 }
 
 .container {
-  padding: 0 100px 0 100px;
+  padding: 0 10% 0 10%;
 }
 
 nav ul,
@@ -48,6 +48,7 @@ header {
 }
 
 .main-info-section {
+  height: calc(100vh - 81.6px);
   background-image: url("../img/stefan-gall-IWMwoBpZ9Sw-unsplash.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -85,10 +86,6 @@ li {
   top: 50%;
   bottom: 50%;
   transform: translateY(-50%);
-}
-
-.main-info-section {
-  height: calc(100vh - 81.6px);
 }
 
 .text {
@@ -194,6 +191,7 @@ span.m-left {
 
 .about {
   padding: 10%;
+  height: fit-content;
 }
 
 .about h1,
@@ -263,6 +261,7 @@ span.m-left {
   justify-content: space-between;
   align-items: center;
   margin-top: 10%;
+  flex-wrap: wrap;
 }
 
 .skills-showcase img {
@@ -312,4 +311,65 @@ footer p {
   color: #707070;
   font-size: 1.2rem;
   padding: 3px 0;
+}
+
+@media screen and (max-width: 750px) {
+  /* CSS for screens that are 400 pixels or less will be put in this section */
+
+  header {
+    flex-direction: column;
+    align-content: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  .main-info-section,
+  .about,
+  .skills,
+  .projects {
+    height: fit-content;
+  }
+
+  .skills {
+    padding-top: 10%;
+    padding-bottom: 10%;
+  }
+
+  .skills h1 {
+    margin-bottom: 15%;
+  }
+
+  .about h1,
+  .projects h1,
+  .skills h1 {
+    text-align: center;
+    font-size: 4rem;
+  }
+
+  .about img {
+    opacity: 0;
+  }
+
+  .projects img {
+    width: 100%;
+  }
+
+  .about h1 {
+    margin-bottom: 5%;
+  }
+
+  .about-me-info {
+    top: 0;
+  }
+
+  .skills-showcase img {
+    width: 40%;
+    height: 40%;
+  }
+
+  .project-list {
+    margin-bottom: 10%;
+  }
 }
